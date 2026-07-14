@@ -1,20 +1,21 @@
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
+import br.com.alura.screenmatch.desafios.Pessoa;
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
-import br.com.alura.screenmatch.desafios.Pessoa;
+import br.com.alura.screenmatch.desafios.Produto;
+import br.com.alura.screenmatch.desafios.ProdutoPerecivel;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("O poderoso chefão");
-        meuFilme.setAnoDeLancamento(1970);
+        Filme meuFilme = new Filme("O poderoso chefão", 1970);
+        //meuFilme.setNome("O poderoso chefão");
+        //meuFilme.setAnoDeLancamento(1970);
         meuFilme.setDuracaoEmMinutos(180);
-        System.out.println("Duração do filme: " + meuFilme.getDuracaoEmMinutos(153));
+        System.out.println("Duração do filme: " + meuFilme.getDuracaoEmMinutos());
 
         meuFilme.exibeFichaTecnica();
         meuFilme.avalia(8);
@@ -26,18 +27,18 @@ public class Principal {
         //meuFilme.totalDeAvaliacoes = 1;
         //System.out.println(meuFilme.pegaMedia());
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
+        Serie lost = new Serie("Lost", 2000);
+        //lost.setNome("Lost");
+        //lost.setAnoDeLancamento(2000);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
         lost.setMinutosPorEpisodio(50);
-        System.out.println("Duração para maratonar Lost: " + lost.getDuracaoEmMinutos(153));
+        System.out.println("Duração para maratonar Lost: " + lost.getDuracaoEmMinutos());
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Avatar");
-        outroFilme.setAnoDeLancamento(2023);
+        Filme outroFilme = new Filme("Avatar", 2023);
+        //outroFilme.setNome("Avatar");
+        //outroFilme.setAnoDeLancamento(2023);
         outroFilme.setDuracaoEmMinutos(200);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -55,10 +56,10 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        var filmeDoMario = new Filme();
-        filmeDoMario.setNome("Bastardos Inglórios");
-        filmeDoMario.setAnoDeLancamento(2009);
-        filmeDoMario.getDuracaoEmMinutos(153);
+        var filmeDoMario = new Filme("Bastardos Inglórios", 2009);
+        //filmeDoMario.setNome("Bastardos Inglórios");
+        //filmeDoMario.setAnoDeLancamento(2009);
+        filmeDoMario.getDuracaoEmMinutos();
         filmeDoMario.avalia(9);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
@@ -73,13 +74,17 @@ public class Principal {
 
 
 
+
         //testes
         //int[] numeros = new int[5];
         //for (int i = 0; i < numeros.length; i++) {
         //    numeros[i] = i + 1;
         //    System.out.println(i+1);
         //}
-        /* Pessoa pessoa1 = new Pessoa();
+
+        //Desafios
+
+        /*Pessoa pessoa1 = new Pessoa();
         pessoa1.setNome("Mário");
         pessoa1.setIdade(18);
         System.out.println(pessoa1.toString());
@@ -103,6 +108,24 @@ public class Principal {
         System.out.println("Primeiro da lista: " + listaDePessoas.get(0));
         System.out.println(listaDePessoas); */
 
-        
+        /* Produto produto1 = new Produto("Suco", 5.99, 2);
+        Produto produto2 = new Produto("Biscoito", 3.99, 1);
+        Produto produto3 = new Produto("Pão", 7.99, 1);
+
+        ArrayList<Produto> listaProduto = new ArrayList<>();
+        listaProduto.add(produto1);
+        listaProduto.add(produto2);
+        listaProduto.add(produto3);
+        System.out.println("\n A lista tem " + listaProduto.size() + " itens!");
+        System.out.println("Produto na posição 2: " + listaProduto.get(2).getNome());
+
+        System.out.println(listaProduto);
+
+        Produto outroProduto = new Produto("Vassoura", 15.00, 2);
+        System.out.println(outroProduto);
+
+        ProdutoPerecivel produtoVeio = new ProdutoPerecivel("Leite", 7.00, 3, "14/07/2026");
+        System.out.println(produtoVeio); */
+
     }
 }
