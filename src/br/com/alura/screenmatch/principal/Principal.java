@@ -1,11 +1,11 @@
+package br.com.alura.screenmatch.principal;
+
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
-import br.com.alura.screenmatch.desafios.Pessoa;
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
-import br.com.alura.screenmatch.desafios.Produto;
-import br.com.alura.screenmatch.desafios.ProdutoPerecivel;
+
 
 import java.util.ArrayList;
 
@@ -82,50 +82,8 @@ public class Principal {
         //    System.out.println(i+1);
         //}
 
-        //Desafios
-
-        /*Pessoa pessoa1 = new Pessoa();
-        pessoa1.setNome("Mário");
-        pessoa1.setIdade(18);
-        System.out.println(pessoa1.toString());
-
-        Pessoa pessoa2 = new Pessoa();
-        pessoa2.setNome("João");
-        pessoa2.setIdade(22);
-        System.out.println(pessoa2.toString());
-
-        Pessoa pessoa3 = new Pessoa();
-        pessoa3.setNome("Kuada");
-        pessoa3.setIdade(19);
-        System.out.println(pessoa3.toString());
 
 
-        ArrayList<Pessoa> listaDePessoas = new ArrayList<>();
-        listaDePessoas.add(pessoa1);
-        listaDePessoas.add(pessoa2);
-        listaDePessoas.add(pessoa3);
-        System.out.println("Tamanho da lista: " + listaDePessoas.size());
-        System.out.println("Primeiro da lista: " + listaDePessoas.get(0));
-        System.out.println(listaDePessoas); */
-
-        /* Produto produto1 = new Produto("Suco", 5.99, 2);
-        Produto produto2 = new Produto("Biscoito", 3.99, 1);
-        Produto produto3 = new Produto("Pão", 7.99, 1);
-
-        ArrayList<Produto> listaProduto = new ArrayList<>();
-        listaProduto.add(produto1);
-        listaProduto.add(produto2);
-        listaProduto.add(produto3);
-        System.out.println("\n A lista tem " + listaProduto.size() + " itens!");
-        System.out.println("Produto na posição 2: " + listaProduto.get(2).getNome());
-
-        System.out.println(listaProduto);
-
-        Produto outroProduto = new Produto("Vassoura", 15.00, 2);
-        System.out.println(outroProduto);
-
-        ProdutoPerecivel produtoVeio = new ProdutoPerecivel("Leite", 7.00, 3, "14/07/2026");
-        System.out.println(produtoVeio); */
 
     }
 }
