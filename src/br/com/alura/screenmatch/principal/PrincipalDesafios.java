@@ -1,13 +1,17 @@
 package br.com.alura.screenmatch.principal;
 
 import br.com.alura.screenmatch.desafios.*;
+import br.com.alura.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 
 public class PrincipalDesafios {
     public static void main(String[] args) {
 
-        Pessoa pessoa1 = new Pessoa();
+        /*Pessoa pessoa1 = new Pessoa();
         pessoa1.setNome("Mário");
         pessoa1.setIdade(18);
         System.out.println(pessoa1.toString());
@@ -29,7 +33,7 @@ public class PrincipalDesafios {
         listaDePessoas.add(pessoa3);
         System.out.println("Tamanho da lista: " + listaDePessoas.size());
         System.out.println("Primeiro da lista: " + listaDePessoas.get(0));
-        System.out.println(listaDePessoas);
+        System.out.println(listaDePessoas);*/
 
         /* Produto produto1 = new Produto("Suco", 5.99, 2);
         Produto produto2 = new Produto("Biscoito", 3.99, 1);
@@ -50,7 +54,7 @@ public class PrincipalDesafios {
         ProdutoPerecivel produtoVeio = new ProdutoPerecivel("Leite", 7.00, 3, "14/07/2026");
         System.out.println(produtoVeio); */
 
-        ArrayList<String> listaStrings = new ArrayList<>();
+        /* ArrayList<String> listaStrings = new ArrayList<>();
         listaStrings.add("Água");
         listaStrings.add("Fogo");
         listaStrings.add("Terra");
@@ -125,9 +129,53 @@ public class PrincipalDesafios {
         }
 
         System.out.println("Conta com o maior saldo - Número: " + contaMaiorSaldo.getNumeroConta() +
-                ", Saldo: " + contaMaiorSaldo.getSaldo());
+                ", Saldo: " + contaMaiorSaldo.getSaldo()); */
 
+        List<Integer> listaNum = new ArrayList<>();
+        listaNum.add(999);
+        listaNum.add(101);
+        listaNum.add(967);
+        listaNum.add(1);
+        listaNum.add(-10);
+        Collections.sort(listaNum);
+        System.out.println("Lista em ordem crescente: " + listaNum);
 
+        TituloDesafio tituloD1 = new TituloDesafio("Filme legal", 1967, "Mário Legal");
+        TituloDesafio tituloD2 = new TituloDesafio("Aventura do Luigi", 2067, "Luigi Martins");
+        TituloDesafio tituloD3 = new TituloDesafio("Fim da Vargentina", 2030, "Mário NM");
+
+        List<TituloDesafio> listaTituloD = new ArrayList<>();
+        listaTituloD.add(tituloD1);
+        listaTituloD.add(tituloD2);
+        listaTituloD.add(tituloD3);
+        Collections.sort(listaTituloD);
+        for (TituloDesafio tituloD : listaTituloD) {
+            System.out.println(tituloD.getNome());
+        }
+
+        /*List<String> listaArrayList = new ArrayList<>();
+        listaArrayList.add("Elemento 1");
+        listaArrayList.add("Elemento 2");
+
+        List<String> listaLinkedList = new LinkedList<>();
+        listaLinkedList.add("Elemento A");
+        listaLinkedList.add("Elemento B");
+
+        System.out.println("ArrayList: " + listaArrayList);
+        System.out.println("LinkedList: " + listaLinkedList);*/
+
+        //Outra forma
+        List<String> listaPolimorfica;
+
+        listaPolimorfica = new ArrayList<>();
+        listaPolimorfica.add("Elemento 1");
+        listaPolimorfica.add("Elemento 2");
+        System.out.println("ArrayList: " + listaPolimorfica);
+
+        listaPolimorfica = new LinkedList<>();
+        listaPolimorfica.add("Elemento A");
+        listaPolimorfica.add("Elemento B");
+        System.out.println("LinkedList: " + listaPolimorfica);
 
     }
 }
