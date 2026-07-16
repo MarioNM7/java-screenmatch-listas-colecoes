@@ -8,6 +8,7 @@ import br.com.alura.screenmatch.modelos.Serie;
 
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Principal {
     public static void main(String[] args) {
@@ -81,8 +82,6 @@ public class Principal {
         //    numeros[i] = i + 1;
         //    System.out.println(i+1);
         //}
-
-
 
 
     }
